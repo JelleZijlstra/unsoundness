@@ -1,0 +1,10 @@
+[project]
+name = "unsoundness"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mypy>=1.16.1",
+    "pyright>=1.1.402",
+]
