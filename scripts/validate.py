@@ -1,8 +1,8 @@
 import argparse
+import importlib.util
 import subprocess
 import sys
 from pathlib import Path
-import importlib.util
 
 EXAMPLES_DIR = Path(__file__).resolve().parent.parent / "examples"
 

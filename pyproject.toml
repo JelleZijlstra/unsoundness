@@ -8,3 +8,11 @@ dependencies = [
     "mypy==1.16.1",
     "pyright==1.1.402",
 ]
+
+[tool.ruff]
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+  "I",  # import sorting
+]
