@@ -50,3 +50,8 @@ To organize the collection, we'll put the examples into some rough categories:
 * `TypeIs`: use of `TypeIs`
 
 More categories may be added later.
+
+## Contributing
+
+Contributions to this repo are welcome! We run a CI script that validates examples
+fulfill the repo's criteria. You can it locally too with `uv run --locked scripts/validate.py`.
