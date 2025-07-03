@@ -52,7 +52,9 @@ To organize the collection, we'll put the examples into some rough categories:
 * `protocol`: related to protocols
 * `overload`: related to overloads
 * `typeddict`: related to `TypedDict`
-* `stdlib`: related to type definitions for the standard library (the "typeshed")
+* `stdlib`: related to type definitions for the standard library (defined in typeshed)
+* `override`: unsafe overrides in subclasses that are not caught by the type system
+* `tuple`: related to special-cased tuple types
 
 More categories may be added later.
 
