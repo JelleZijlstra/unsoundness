@@ -48,6 +48,8 @@ To organize the collection, we'll put the examples into some rough categories:
 * `type-ignore`: use of `# type: ignore`
 * `TypeGuard`: use of `TypeGuard`
 * `TypeIs`: use of `TypeIs`
+* `narrowing`: use of other type narrowing constructs
+* `protocol`: related to protocols
 
 More categories may be added later.
 
