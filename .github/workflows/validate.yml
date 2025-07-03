@@ -2,6 +2,8 @@ name: Validate Examples
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 jobs:
