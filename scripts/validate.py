@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-from __future__ import annotations
-
+import argparse
 import subprocess
 import sys
 from pathlib import Path
@@ -11,13 +9,20 @@ EXAMPLES_DIR = Path(__file__).resolve().parent.parent / "examples"
 
 def run_typecheck(path: Path) -> bool:
     print(f"Running mypy on {path}")
-    mypy = subprocess.run(["mypy", str(path)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    mypy = subprocess.run(
+        ["mypy", str(path)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
+    )
     if mypy.returncode != 0:
         print(mypy.stdout)
         print(f"mypy failed on {path}")
         return False
     print(f"Running pyright on {path}")
-    pyright = subprocess.run(["pyright", str(path)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    pyright = subprocess.run(
+        ["pyright", str(path)],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+    )
     if pyright.returncode != 0:
         print(pyright.stdout)
         print(f"pyright failed on {path}")
@@ -50,8 +55,19 @@ def run_runtime(path: Path) -> bool:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Validate the examples")
+    parser.add_argument(
+        "files",
+        nargs="*",
+        help="Specific files to validate. If not provided, all examples will be validated.",
+    )
+    args = parser.parse_args()
+    if args.files:
+        paths = [Path(file) for file in args.files]
+    else:
+        paths = sorted(EXAMPLES_DIR.rglob("*.py"))
     success = True
-    for path in sorted(EXAMPLES_DIR.rglob("*.py")):
+    for path in paths:
         print(f"\nValidating {path}")
         if not run_typecheck(path):
             success = False
