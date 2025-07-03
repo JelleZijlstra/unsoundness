@@ -1,10 +1,10 @@
 [project]
 name = "unsoundness"
 version = "0.1.0"
-description = "Add your description here"
+description = "Collecting examples of unsoundness in the Python type system"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.13"
 dependencies = [
-    "mypy>=1.16.1",
-    "pyright>=1.1.402",
+    "mypy==1.16.1",
+    "pyright==1.1.402",
 ]
