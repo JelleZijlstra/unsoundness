@@ -53,7 +53,7 @@ def _helper(td: Foo | Bar) -> str:
         return td["quack"]
 
 
-def convert(x: int) -> str:
+def func(x: int) -> str:
     baz: Baz = {"moo": x, "quack": "*quack*"}
     string = _helper(baz)  # call is allowed because `Baz` is assignable to `Bar`
     return string

@@ -51,6 +51,6 @@ def _outer(args: Args) -> str:
     return _inner(**args)
 
 
-def convert(x: int) -> str:
+def func(x: int) -> str:
     stinky: StinkyArgs = {"x": "", "y": "", "z": x}
     return _outer(stinky)

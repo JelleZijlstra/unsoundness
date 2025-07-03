@@ -19,7 +19,7 @@ def _iterable_to_dict(things: Iterable[tuple[int, str]]) -> dict[int, str]:
     return dict(things)
 
 
-def convert(x: int) -> str:
+def func(x: int) -> str:
     dict1 = {(x, "apple"): x}
     dict2 = _iterable_to_dict(dict1)
     # dict2 is a `dict[int, str]` from a type checker's point of view,
