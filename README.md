@@ -51,6 +51,8 @@ To organize the collection, we'll put the examples into some rough categories:
 * `narrowing`: use of other type narrowing constructs
 * `protocol`: related to protocols
 * `overload`: related to overloads
+* `typeddict`: related to `TypedDict`
+* `stdlib`: related to type definitions for the standard library (the "typeshed")
 
 More categories may be added later.
 
