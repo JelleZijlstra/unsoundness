@@ -7,10 +7,18 @@ from pathlib import Path
 EXAMPLES_DIR = Path(__file__).resolve().parent.parent / "examples"
 
 
+GREEN = "\033[32m"
+RED = "\033[31m"
+RESET = "\033[0m"
+
+
 def run_typecheck(path: Path) -> bool:
     print(f"Running mypy on {path}")
     mypy = subprocess.run(
-        ["mypy", str(path)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
+        ["mypy", "--pretty", "--color-output", str(path)],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
     )
     if mypy.returncode != 0:
         print(mypy.stdout)
@@ -74,9 +82,9 @@ def main() -> None:
         if not run_runtime(path):
             success = False
     if not success:
-        print("Validation failed.")
+        print(f"{RED}Validation failed.{RESET}")
         sys.exit(1)
-    print("All examples validated successfully.")
+    print(f"{GREEN}All examples validated successfully.{RESET}")
 
 
 if __name__ == "__main__":
