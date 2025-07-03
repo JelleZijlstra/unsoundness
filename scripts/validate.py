@@ -2,8 +2,8 @@ import argparse
 import importlib.util
 import subprocess
 import sys
-from pathlib import Path
 from dataclasses import dataclass
+from pathlib import Path
 from types import ModuleType
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
