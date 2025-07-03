@@ -18,11 +18,12 @@ assert x == [1, 2, 3]
 ```
 """
 
-
 from collections.abc import Set as AbstractSet
 
 
-def _enhance_fruits(fruits: AbstractSet[str | int], fruit: int | str) -> AbstractSet[str | int]:
+def _enhance_fruits(
+    fruits: AbstractSet[str | int], fruit: int | str
+) -> AbstractSet[str | int]:
     fruits |= {fruit}
     return fruits
 
@@ -31,4 +32,3 @@ def func(x: int) -> str:
     fruits: set[str] = {"apple", "banana"}
     _ = _enhance_fruits(fruits, x)
     return next(f for f in fruits if f not in {"apple", "banana"})
-
