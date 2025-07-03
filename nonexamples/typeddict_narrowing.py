@@ -25,6 +25,7 @@ p3: Point2d = p2  # ok!
 p4: Point2d = {"x": 1, "y": 2, "z": 3}  # not allowed, but only because it's a literal dict
 ```
 """
+ACCEPTED_BY = {"mypy": False, "pyright": True}
 
 from typing import TypedDict
 

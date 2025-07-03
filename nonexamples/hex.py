@@ -1,5 +1,7 @@
 """Accepted by mypy but not pyright."""
 
+ACCEPTED_BY = {"mypy": True, "pyright": False}
+
 from typing import Protocol, runtime_checkable
 
 

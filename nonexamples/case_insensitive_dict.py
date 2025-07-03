@@ -3,6 +3,8 @@
 This is accepted by pyright but not mypy.
 """
 
+ACCEPTED_BY = {"mypy": False, "pyright": True}
+
 
 class CaseInsensitiveDict[VT](dict[str, VT]):
     def __setitem__(self, key: str, value: VT) -> None:

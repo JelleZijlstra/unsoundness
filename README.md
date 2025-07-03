@@ -36,12 +36,22 @@ in type checkers. At the same time, while there is
 [a spec for the Python type system](https://typing.python.org/en/latest/),
 it is not always very precise, and end users use individual type checkers, not the spec
 directly. Therefore, examples collected in this repo generally should either
-follow from the spec, or work under multiple type checkers, or both. If this
-is unclear in practice, let's talk about it!
+follow from the spec, or work under multiple type checkers, or both.
+The repo's CI validates that examples in the `examples/` repo are accepted
+by both mypy and pyright.
+
+Some unsound behaviors apply only to one type checker. If the unsoundness is the result of a
+deliberate choice by that type checker (not just a bug), it can be added to the `nonexamples`
+directory. Files in this directory should define a dictionary of the form
+`ACCEPTED_BY = {"mypy": True, "pyright": False}` to indicate which type checkers accept the code
+(that is, have unsound behavior).
+
+If this doesn't work well in practice, let's talk about it!
 
 ## Categories
 
-To organize the collection, we'll put the examples into some rough categories:
+To organize the collection, we'll put the examples into some rough categories,
+corresponding to subdirectories within the `examples/` directory:
 
 * `Any`: use of `Any` (including implicit `Any` on unannotated code)
 * `cast`: use of `typing.cast`
@@ -54,7 +64,9 @@ To organize the collection, we'll put the examples into some rough categories:
 * `typeddict`: related to `TypedDict`
 * `stdlib`: related to type definitions for the standard library (the "typeshed")
 
-More categories may be added later.
+More categories can be added as needed.
+
+
 
 ## Contributing
 
