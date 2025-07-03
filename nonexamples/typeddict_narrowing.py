@@ -26,6 +26,8 @@ p4: Point2d = {"x": 1, "y": 2, "z": 3}  # not allowed, but only because it's a l
 ```
 """
 
+ACCEPTED_BY = {"mypy": False, "pyright": True}
+
 from typing import TypedDict
 
 
