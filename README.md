@@ -50,6 +50,7 @@ To organize the collection, we'll put the examples into some rough categories:
 * `TypeIs`: use of `TypeIs`
 * `narrowing`: use of other type narrowing constructs
 * `protocol`: related to protocols
+* `overload`: related to overloads
 
 More categories may be added later.
 
