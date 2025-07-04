@@ -67,6 +67,7 @@ corresponding to subdirectories within the `examples/` directory:
 * `tuple`: related to special-cased tuple types
 * `runtime`: runtime manipulation of objects that the type system does not recognize
 * `generic`: use of generic classes and functions
+* `descriptors`: use of descriptors
 
 More categories can be added as needed.
 
