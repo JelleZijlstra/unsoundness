@@ -66,6 +66,7 @@ corresponding to subdirectories within the `examples/` directory:
 * `override`: unsafe overrides in subclasses that are not caught by the type system
 * `tuple`: related to special-cased tuple types
 * `runtime`: runtime manipulation of objects that the type system does not recognize
+* `generic`: use of generic classes and functions
 
 More categories can be added as needed.
 
