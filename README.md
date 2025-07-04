@@ -65,6 +65,7 @@ corresponding to subdirectories within the `examples/` directory:
 * `stdlib`: related to type definitions for the standard library (defined in typeshed)
 * `override`: unsafe overrides in subclasses that are not caught by the type system
 * `tuple`: related to special-cased tuple types
+* `runtime`: runtime manipulation of objects that the type system does not recognize
 
 More categories can be added as needed.
 
