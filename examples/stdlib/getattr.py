@@ -5,7 +5,7 @@ This example shows that getattr returns an `Any` type allowing for unsoundness.
 
 class StoreX:
     def __init__(self, x: int) -> None:
-        self.x: str = str(x)
+        self.x: int = x
 
 
 def func(x: int) -> str:
