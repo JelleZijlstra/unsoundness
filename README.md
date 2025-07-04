@@ -15,7 +15,7 @@ This repo sets a more concrete goal: write a function that can be used to fool
 a type checker into turning a value of one type into another. Concretely, we
 collect pieces of code with the following properties:
 
-* There is a `def convert(x: int) -> str:`
+* There is a `def func(x: int) -> str:`
 * At runtime, the function returns any integer argument unchanged
 * Type checkers accept the code without errors
 
@@ -67,6 +67,7 @@ corresponding to subdirectories within the `examples/` directory:
 * `tuple`: related to special-cased tuple types
 * `runtime`: runtime manipulation of objects that the type system does not recognize
 * `generic`: use of generic classes and functions
+* `descriptors`: use of descriptors
 
 More categories can be added as needed.
 
