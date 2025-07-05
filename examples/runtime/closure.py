@@ -17,7 +17,7 @@ class ClosureTestClass:
         def get_str_x() -> str:
             return str_x
 
-        self.get_str_x: Callable[[], str] = get_str_x
+        self.get_str_x = get_str_x
 
 
 def func(x: int) -> str:
