@@ -15,14 +15,14 @@ the non-mangled variable with a new, different value type.
 
 class HiddenDunderVariables:
     def __init__(self, x: int) -> None:
-        self.__str_x: str = str(x)
-        self._HiddenDunderVariables__str_x: int = x
+        self.__str_x = str(x)
+        self._HiddenDunderVariables__str_x = x
 
     def get_str_x(self) -> str:
         return self.__str_x
 
 
 def func(x: int) -> str:
-    hidden_dunder_variables: HiddenDunderVariables = HiddenDunderVariables(x)
+    hidden_dunder_variables = HiddenDunderVariables(x)
 
     return hidden_dunder_variables.get_str_x()
