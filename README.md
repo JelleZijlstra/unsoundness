@@ -68,6 +68,7 @@ corresponding to subdirectories within the `examples/` directory:
 * `runtime`: runtime manipulation of objects that the type system does not recognize
 * `generic`: use of generic classes and functions
 * `descriptors`: use of descriptors
+* `ctx-managers`: related to context managers
 
 More categories can be added as needed.
 
