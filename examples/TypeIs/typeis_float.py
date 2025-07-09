@@ -5,11 +5,14 @@ of the float type can lead to unsoundness.
 
 from typing import TypeIs
 
+
 def is_float(x: object) -> TypeIs[float]:
     return isinstance(x, float)
 
+
 def func(x: int) -> str:
     return hider(x)
+
 
 def hider(x: float) -> str:
     if not is_float(x):
