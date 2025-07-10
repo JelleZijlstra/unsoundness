@@ -5,6 +5,7 @@ type.
 Based on an example by GameRoMan in https://github.com/JelleZijlstra/unsoundness/issues/19
 """
 
+
 class SomeClass:
     x: int | str
 
