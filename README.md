@@ -68,10 +68,9 @@ corresponding to subdirectories within the `examples/` directory:
 * `generic`: use of generic classes and functions
 * `descriptors`: use of descriptors
 * `ctx-managers`: related to context managers
+* `metaclasses`: related to metaclasses
 
 More categories can be added as needed.
-
-
 
 ## Contributing
 
