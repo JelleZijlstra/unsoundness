@@ -7,6 +7,7 @@ and mypy and pyright incorrectly simplify the narrowed type
 """
 
 from typing import Any
+
 from typing_extensions import TypeIs
 
 
