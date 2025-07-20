@@ -10,6 +10,7 @@ from typing import Protocol, Self
 
 class Proto(Protocol):
     x: int
+
     def g(self) -> Self: ...
 
 
