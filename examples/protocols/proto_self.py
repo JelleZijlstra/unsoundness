@@ -9,29 +9,27 @@ from typing import Protocol, Self
 
 
 class Proto(Protocol):
-    x: int
-
-    def g(self) -> Self: ...
+    def get(self) -> Self: ...
 
 
 class Base:
     def __init__(self, x: int) -> None:
-        self.x = x
+        self.attr1 = x
 
-    def g(self) -> Sub1:
-        return Sub1(self.x)
+    def get(self) -> Sub1:
+        return Sub1(self.attr1)
 
 
 class Sub1(Base):
     def __init__(self, x: int) -> None:
         super().__init__(x)
-        self.y = x
+        self.attr2 = x
 
 
 class Sub2(Base):
     def __init__(self, x: int) -> None:
         super().__init__(x)
-        self.y = str(x)
+        self.attr2 = str(x)
 
 
 def get_it1[BaseT: Base](obj: BaseT) -> BaseT:
@@ -39,10 +37,10 @@ def get_it1[BaseT: Base](obj: BaseT) -> BaseT:
 
 
 def get_it2[ProtoT: Proto](obj: ProtoT) -> ProtoT:
-    return obj.g()
+    return obj.get()
 
 
 def func(x: int) -> str:
     obj = Sub2(x)
     obj2 = get_it1(obj)
-    return obj2.y
+    return obj2.attr2
