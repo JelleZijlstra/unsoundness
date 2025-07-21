@@ -12,9 +12,18 @@ but it is listed separately because this pattern is considerably more subtle.
 
 from typing import overload
 
-class A: pass
-class B: pass
-class C(A, B): pass
+
+class A:
+    pass
+
+
+class B:
+    pass
+
+
+class C(A, B):
+    pass
+
 
 @overload
 def f(x: A, y: int) -> int: ...
@@ -26,8 +35,10 @@ def f(x: A | B, y: int) -> int | str:
     else:
         return str(y)
 
+
 def wrapper(x: B, y: int) -> str:
     return f(x, y)
+
 
 def func(x: int) -> str:
     return wrapper(C(), x)
