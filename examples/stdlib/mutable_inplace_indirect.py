@@ -8,6 +8,7 @@ See the comment on `other` in mutable_inplace.
 This example is therefore a more indirect reproduction of the same root cause as in mutable_inplace, working around the pyright
 behavior, to showcase that even below the incorrectly inferred type, it suffers from the same issue that mypy does.
 """
+# TODO: review @decorator-factory's comment on the PR thread to see if anything is missing from the description.
 
 from collections.abc import Set as AbstractSet
 
