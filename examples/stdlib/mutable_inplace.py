@@ -27,5 +27,9 @@ def func(x: int) -> str:
     # should not be mutable and should only contain ints
     result: AbstractSet[str] = set()
     other: AbstractSet[object] = result
+    # At the time of writing, pyright seems to ignore the annotation on other in favor of its inferred type.
+    # reveal_type reveals that it considers other a built-in set. As a result, pyright is unsound for this example, like mypy,
+    # but for a different root cause. For a more elaborate example that showcases the same root cause for pyright, see
+    # mutable_inplace_indirect.
     other |= {x}
     return next(iter(result))
