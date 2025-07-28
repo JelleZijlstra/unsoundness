@@ -19,6 +19,7 @@ ys = ys + [4]
 assert xs == [1, 2, 3]
 ```
 """
+# TODO: update description with analysis from PR thread
 
 from collections.abc import Set as AbstractSet
 
