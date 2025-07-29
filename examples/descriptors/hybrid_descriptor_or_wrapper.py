@@ -2,7 +2,7 @@ from typing import Callable, Concatenate
 
 
 class WrapperOrDesc[**_P, _T]:
-    def __init__[**_P, _T](self, func:Callable[_P, _T], i:object | None = None):
+    def __init__(self, func:Callable[_P, _T], i:object | None = None):
         self.func = func
         self.i = i
     
