@@ -5,5 +5,6 @@ ACCEPTED_BY = {"mypy": True, "pyright": True}
 
 f = lambda x: x
 
+
 def func(x: int) -> str:
     return f(x)
