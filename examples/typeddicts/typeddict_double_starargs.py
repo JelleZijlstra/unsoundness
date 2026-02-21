@@ -1,3 +1,9 @@
+"""Using unpacking with multiple TypedDicts allows smuggling in
+a non-required item with the wrong type.
+
+Similar to typeddict_argument_unpacking.py.
+"""
+
 from typing import NotRequired, TypedDict
 
 
