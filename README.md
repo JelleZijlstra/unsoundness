@@ -54,8 +54,7 @@ To organize the collection, we'll put the examples into some rough categories,
 corresponding to subdirectories within the `examples/` directory:
 
 * `Any`: use of `Any` (including implicit `Any` on unannotated code)
-* `cast`: use of `typing.cast`
-* `type-ignore`: use of `# type: ignore`
+* `directives`: use of type checker directives that bypass type checking, such as `# type: ignore`
 * `TypeGuard`: use of `TypeGuard`
 * `TypeIs`: use of `TypeIs`
 * `narrowing`: use of other type narrowing constructs
@@ -69,10 +68,9 @@ corresponding to subdirectories within the `examples/` directory:
 * `generic`: use of generic classes and functions
 * `descriptors`: use of descriptors
 * `ctx-managers`: related to context managers
+* `metaclasses`: related to metaclasses
 
 More categories can be added as needed.
-
-
 
 ## Contributing
 
