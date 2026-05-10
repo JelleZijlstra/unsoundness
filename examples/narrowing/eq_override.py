@@ -20,8 +20,9 @@ class Evil(str):
 
 
 def get(td: TD, key: str) -> str:
-    if key == "b":
-        return td[key]
+    match key:
+        case "b":
+            return td[key]
     return "hi"
 
 
