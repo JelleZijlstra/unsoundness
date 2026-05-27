@@ -13,7 +13,7 @@ class Fruit:
 
 class Banana(Fruit):
     def accept(self, x: object) -> str:
-        raise NotImplementedError
+        return "banana accepted"
 
 
 def reset(a: Fruit) -> None:
