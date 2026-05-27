@@ -57,6 +57,7 @@ corresponding to subdirectories within the `examples/` directory:
 * `directives`: use of type checker directives that bypass type checking, such as `# type: ignore`
 * `TypeGuard`: use of `TypeGuard`
 * `TypeIs`: use of `TypeIs`
+* `Self`: use of `Self`
 * `narrowing`: use of other type narrowing constructs
 * `protocol`: related to protocols
 * `overload`: related to overloads
